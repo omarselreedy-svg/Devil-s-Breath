@@ -1,0 +1,20 @@
+def calculate_power_from_voltage_current(voltage, current):
+    """Calculate power (Watts) using Voltage (Volts) and Current (Amps)."""
+    return voltage * current
+
+def calculate_power_from_current_resistance(current, resistance):
+    """Calculate power (Watts) using Current (Amps) and Resistance (Ohms)."""
+    return (current ** 2) * resistance
+
+if __name__ == "__main__":
+    # Example 1: Using 120 Volts and 5 Amps
+    v = 120.0  # Volts
+    i = 5.0    # Amps
+    p1 = calculate_power_from_voltage_current(v, i)
+    print(f"Power (V & I): {p1:.2f} Watts")
+
+    # Example 2: Using 4 Amps and 10 Ohms resistance
+    current_val = 4.0  # Amps
+    resistance_val = 10.0  # Ohms
+    p2 = calculate_power_from_current_resistance(current_val, resistance_val)
+    print(f"Power (I & R): {p2:.2f} Watts")
